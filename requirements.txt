@@ -3,3 +3,5 @@ numpy
 pandas
 pydeck
 streamlit
+snowflake-connector-python
+snowflake-snowpark-python
