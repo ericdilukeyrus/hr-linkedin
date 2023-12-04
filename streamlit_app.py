@@ -71,7 +71,9 @@ def hr_data_frame():
             st.warning("Error updating table")
         #st.rerun()
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="HR - Linkedin Licenses", layout="wide")
+
+
 hr_data_frame()
 
 
