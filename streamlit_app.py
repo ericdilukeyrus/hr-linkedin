@@ -6,7 +6,7 @@ from snowflake.snowpark import Session
 def hr_data_frame():
 
     #Initialize connection.
-    if 's'
+    #if 'sb'
     with open('creds.json') as f:
         connection_param = json.load(f)
     ses = Session.builder.configs(connection_param).create()   
