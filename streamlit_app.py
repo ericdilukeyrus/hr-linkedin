@@ -72,7 +72,7 @@ def hr_data_frame():
         #st.rerun()
 
 st.set_page_config(page_title="HR - Linkedin Licenses", layout="wide")
-
+st.title("HR Linkedin Licenses")
 
 hr_data_frame()
 
