@@ -71,7 +71,7 @@ def hr_data_frame():
             st.warning("Error updating table")
         #st.rerun()
 
-
+st.set_page_config(layout="wide")
 hr_data_frame()
 
 
