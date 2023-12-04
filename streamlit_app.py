@@ -25,7 +25,7 @@ def hr_data_frame():
     #st.write(dataset)
 
     with st.form("data_editor_form"):
-        st.caption("Edit the datafrae below")
+        st.caption("Edit the LinkedIn contracts below")
         edited_data = st.data_editor(
             dataset,
             column_config={
