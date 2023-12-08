@@ -18,7 +18,7 @@ def hr_data_frame():
     
     def get_dataset():
         #Load table to df
-        df = session.table("LINKEDINLICENSES_")
+        df = session.table("LINKEDINLICENSES")
         return df
 
     dataset = get_dataset()
@@ -63,8 +63,8 @@ def hr_data_frame():
 
     if submit_button:
         try:
-            session.sql("TRUNCATE TABLE LINKEDINLICENSES_").collect() #Truncate table
-            session.write_pandas(edited_data,"LINKEDINLICENSES_",overwrite=False)
+            session.sql("TRUNCATE TABLE LINKEDINLICENSES").collect() #Truncate table
+            session.write_pandas(edited_data,"LINKEDINLICENSES",overwrite=False)
             st.success("Table updated")
             time.sleep(5)
         except:
