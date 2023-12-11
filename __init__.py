@@ -8,7 +8,7 @@ def hr_data_frame():
 
     #@st.cache_data()
     def get_hr_data():
-        df = session.table("LINKEDINLICENSES_").to_pandas() #get all data from the table
+        df = session.table("LINKEDINLICENSES").to_pandas() #get all data from the table
         return  df
 
     df = get_hr_data() 
@@ -51,10 +51,10 @@ def hr_data_frame():
     edited_data["VALID_END_DATE"] = edited_data["VALID_END_DATE"].dt.strftime("%Y-%m-%d %H:%M:%S.%f")
     edited_data["VALID_CONTRACT_END_DATE"] = edited_data["VALID_CONTRACT_END_DATE"].dt.strftime("%Y-%m-%d %H:%M:%S.%f")
 
-    table_name = 'LINKEDINLICENSES_'
+    table_name = 'LINKEDINLICENSES'
      # Button to submit changes
     if st.button('Submit Changes'):
-        session.sql("TRUNCATE TABLE LINKEDINLICENSES_").collect() #Truncate table
+        session.sql("TRUNCATE TABLE LINKEDINLICENSES").collect() #Truncate table
         conn.write_pandas(edited_data,table_name, overwrite=False)
         #st.rerun()
     
