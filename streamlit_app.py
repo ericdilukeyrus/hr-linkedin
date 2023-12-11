@@ -6,6 +6,7 @@ from snowflake.snowpark import Session
 
 def hr_data_frame():
 
+
     #Initialize connection.
     if 'snowflake_connection' not in st.session_state:
         #Connect to Snowflake
